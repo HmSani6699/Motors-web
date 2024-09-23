@@ -4,7 +4,7 @@ import Navlink from "../../component/Navlink/Navlink";
 
 const Navbar = () => {
   return (
-    <nav className="relative z-10">
+    <nav className="absolute top-0 w-full z-10">
       <div className="max-w-[1376px] mx-auto flex items-center justify-between h-[60px]">
         {/* =======> Left site <======= */}
         <div className="flex items-center gap-[10px]">

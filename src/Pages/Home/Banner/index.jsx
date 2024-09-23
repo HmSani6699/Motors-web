@@ -5,8 +5,8 @@ import rightArrow from "../../../../public/svg/Arrow right.svg";
 
 const Banner = () => {
   return (
-    <div className="bg-[url('../../../../public/images/banner.png')] h-screen bg-cover absolute top-0 w-full flex items-center">
-      <div className="max-w-[1200px] mx-auto w-full mt-[112px]">
+    <div className="bg-[url('../../../../public/images/banner.png')] h-screen bg-cover  w-full flex items-center">
+      <div className="max-w-[1200px] mx-auto w-full mt-[140px]">
         <h2 className="lg:text-[64px] font-[700] text-white leading-[76px]">
           Meet the GR <br /> Corolla Power <br /> Beyond Limits
         </h2>
@@ -19,7 +19,7 @@ const Banner = () => {
         </button>
 
         {/* ======> Delete <===== */}
-        <div className="flex items-center justify-between  w-full mt-[87px]">
+        <div className="flex items-center justify-between  w-full mt-[87px] mb-[50px]">
           <div>
             <img src={leftArrow} alt="" />
           </div>
