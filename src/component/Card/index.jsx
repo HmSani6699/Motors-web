@@ -1,24 +1,38 @@
 import React from "react";
+import image from "../../.../../../public/card/image6.png";
+import arrow from "../../../public/svg/Arrow.svg";
+import date from "../../../public/svg/Frame.svg";
 
-const Card = ({ image }) => {
+const Card = () => {
   return (
     <div>
-      <div className="w-[555px] h-[574px] relative">
-        <img className="h-full w-full" src={image} alt="" />
-        <div className="absolute bottom-[26px] left-[24px]">
-          <h2 className="mb-[16px] text-[32px] font-[700] text-white">
-            Range Rover
+      <div className=" h-[574px] relative">
+        <div className="h-[300px]">
+          <img className="h-full w-full" src={image} alt="" />
+        </div>
+        <div className="mt-[32px]">
+          <h2 className="mb-[16px] text-[24px] font-[600] text-[#141414] leading-[28.8px]">
+            Top 5 Must-Have Features in Modern Luxury Cars
           </h2>
-          <p className="text-[14px] font-[400] text-white">
-            These are the vehicles that have captured the hearts of drivers
-            everywhere. Explore our top-selling models
+          <p className="text-[16px] font-[400] text-[#141414] leading-[24px]">
+            Stay connected with the latest trends, stories, and insights from
+            the automotive world.
           </p>
+
+          <div className="mt-[24px] flex items-center justify-between">
+            <button className="text-[#2498E2] flex gap-2 items-center">
+              <h2 className="text-[16px] font-[500]">Learn more</h2>
+              <img src={arrow} alt="dsfds" />
+            </button>
+            <div className="flex gap-2 items-center ">
+              <img src={date} alt="" />
+              <h3 className=" text-[#B0B0B0] text-[16px] font-[400]">
+                Aug 1, 2024
+              </h3>
+            </div>
+          </div>
         </div>
       </div>
-
-      <button className="border-2 w-full mt-[24px] border-[#2498E2] text-[#2498E2] py-[15px] rounded-[8px] ">
-        View details
-      </button>
     </div>
   );
 };

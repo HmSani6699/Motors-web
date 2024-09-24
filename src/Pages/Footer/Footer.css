@@ -1,0 +1,10 @@
+.main-div {
+  background: rgb(0, 99, 116);
+  background: linear-gradient(180deg, rgb(6 58 67) 16%, rgba(2, 6, 23, 1) 71%);
+}
+
+.sub_div {
+  background: url("../../../public/svg/footer.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

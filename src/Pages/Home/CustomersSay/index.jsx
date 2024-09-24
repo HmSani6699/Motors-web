@@ -5,7 +5,7 @@ import "./CustomerSay.css";
 
 const CustomersSay = () => {
   return (
-    <div className="h-[939px] bg-[#D3D3D3] main€-div ">
+    <div className="h-[939px] bg-[#D3D3D3] main-div ">
       <div className="max-w-[1100px] mx-auto text-white py-[94px]">
         <h2 className="text-[48px] font-[700]">What Our Customers Say</h2>
         <p className="text-[32px] font-[400] leading-[38px] pl-[209px] mt-[16px]">

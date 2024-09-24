@@ -6,6 +6,7 @@ import card_image4 from "../../../../public/card/image4.png";
 import card_image5 from "../../../../public/card/image5.png";
 import Card from "../../../component/Card";
 import SubCard from "../../../component/SubCard";
+import ViewCard from "../../../component/ViewCard";
 
 const BestSelling = () => {
   return (
@@ -29,7 +30,7 @@ const BestSelling = () => {
       <div className="flex  gap-[32px]">
         {/* =========> Left Site <======= */}
         <div>
-          <Card image={card_image1} />
+          <ViewCard image={card_image1} />
         </div>
         {/* =========> Right Site <======= */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[32px]">
