@@ -11,10 +11,10 @@ const Card = () => {
           <img className="h-full w-full" src={image} alt="" />
         </div>
         <div className="mt-[32px]">
-          <h2 className="mb-[16px] text-[24px] font-[600] text-[#141414] leading-[28.8px]">
+          <h2 className="mb-[16px] text-[24px] font-[600] text-[#141414] leading-[28.8px] font-avenir">
             Top 5 Must-Have Features in Modern Luxury Cars
           </h2>
-          <p className="text-[16px] font-[400] text-[#141414] leading-[24px]">
+          <p className="text-[16px] font-[400] text-[#141414] leading-[24px] font-avenir">
             Stay connected with the latest trends, stories, and insights from
             the automotive world.
           </p>

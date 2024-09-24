@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../../public/images/logo.svg";
 import Navlink from "../../component/Navlink/Navlink";
+import menu from "../../../public/images/menu-alt-2.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="absolute top-0 w-full z-10">
-      <div className="max-w-[1376px] mx-auto flex items-center justify-between h-[60px]">
+      {/* =========> PC nav <====== */}
+      <div className="max-w-[1376px] mx-auto  items-center justify-between h-[60px] hidden lg:flex">
         {/* =======> Left site <======= */}
         <div className="flex items-center gap-[10px]">
           <img src={logo} alt="" />
@@ -24,6 +28,43 @@ const Navbar = () => {
           <button className="py-[16px] px-[35px] rounded-[8px] bg-[#2498E2] font-[500] text-white">
             Contact us
           </button>
+        </div>
+      </div>
+      {/* =========> Mobile and Tab nav <====== */}
+      <div className="w-full py-[20px] relative lg:hidden ">
+        <div
+          className={`flex items-center justify-between px-[20px] ${
+            isOpen && "border-b-2 pb-[10px]"
+          }`}
+        >
+          {/* =======> Left site <======= */}
+          <div className="flex items-center gap-[6px]">
+            <img className="w-[27px] h-[24px]" src={logo} alt="" />
+            <h2 className="text-[16px] font-[600] font-avenir">Motors Bay</h2>
+          </div>
+
+          <button onClick={() => setIsOpen(!isOpen)}>
+            <img className="w-[24px] h-[24px]" src={menu} alt="" />
+          </button>
+        </div>
+        <div
+          className={`${
+            isOpen ? "h-[365px] " : "h-0 hidden"
+          } bg-white absolute top-[60px] w-full px-[20px]`}
+        >
+          <div className=" flex flex-col  gap-[24px] mt-[25px]">
+            <Link className="text-[#141414] text-[20px] font-[400]">Home</Link>
+            <Link className="text-[#141414] text-[20px] font-[400]">
+              About Us
+            </Link>
+            <Link className="text-[#141414] text-[20px] font-[400]">Stock</Link>
+            <Link className="text-[#141414] text-[20px] font-[400]">Blog</Link>
+            <div>
+              <button className="py-[16px] px-[35px] rounded-[8px] bg-[#2498E2] font-[500] text-white">
+                Contact us
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </nav>

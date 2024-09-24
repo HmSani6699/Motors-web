@@ -6,10 +6,12 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="main-div relative">
+    <div className="main-div relative overflow-hidden">
       <div className="max-w-[1376px] mx-auto relative pt-[70px] ">
-        <div className="absolute top-[25px] pl-[60px]">
-          <h2 className="text-[48px] font-[700] text-white">Reach Out to Us</h2>
+        <div className="absolute top-[60px] pl-[60px]">
+          <h2 className="text-[48px] font-[700] text-white font-avenir">
+            Reach Out to Us
+          </h2>
         </div>
         <div className=" relative">
           <svg
@@ -53,7 +55,7 @@ const Footer = () => {
           </svg>
           <div className="text-white flex items-center justify-between absolute top-[70px] pl-[60px] w-full">
             <div className="w-1/2">
-              <p className="text-[20px] font-[500] leading-[30px] mb-[40px]">
+              <p className="text-[20px] font-[500] leading-[30px] mb-[40px] font-avenir">
                 Lorem ipsum dolor sit amet consectetur. Felis eget elementum
                 malesuada sit morbi nibh elit lectus morbi. Semper mi sit risus
                 lorem cursus erat. Ut iaculis mi dignissim ut vel ultrices
@@ -77,7 +79,7 @@ const Footer = () => {
           <h2 className="text-[24px] font-[600] text-white">Motors Bay</h2>
         </div>
 
-        <div className="flex items-center gap-[69px] ">
+        <div className="flex items-center gap-[40px] ">
           <Link className=" bg-[#ffffff21] text-white rounded-[20px] py-[8px] px-[12px] font-[500]">
             Home
           </Link>
@@ -93,10 +95,14 @@ const Footer = () => {
         </div>
       </div>
 
-      <div>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-        laboriosam perferendis unde saepe error amet provident quos beatae
-        doloribus quo.
+      <div className="pb-[56px] mt-[36px] text-white max-w-[1305px] mx-auto flex items-center justify-between">
+        <p className="text-[14px] font-[400] text-[#BDBDBD]">
+          ©2024 Motorbay, All Rights Reserved.
+        </p>
+        <p className="text-[14px] font-[400] text-[#BDBDBD]">
+          <span className="">Privacy Policy</span>
+          <span className="pl-[20px]">Terms of Services </span>
+        </p>
       </div>
     </div>
   );

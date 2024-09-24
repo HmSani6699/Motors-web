@@ -6,17 +6,19 @@ import BestSelling from "./BestSelling";
 import CustomersSay from "./CustomersSay";
 import Innovations from "./Innovations";
 import Footer from "../Footer";
+import Navbar from "../Navbar";
 
 const Home = () => {
   return (
-    <div>
+    <div className="relative">
+      <Navbar />
       <Banner />
-      <Hero />
+      {/* <Hero />
       <Quality />
       <BestSelling />
       <CustomersSay />
       <Innovations />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };

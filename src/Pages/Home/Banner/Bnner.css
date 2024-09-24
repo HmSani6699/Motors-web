@@ -1,0 +1,9 @@
+/* Swiper pagination bullets */
+.swiper-pagination-bullet {
+  background-color: #bdbdbd; /* Inactive bullet color */
+  opacity: 1; /* Ensure bullets are fully opaque */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #2498e2 !important; /* Active bullet color */
+}

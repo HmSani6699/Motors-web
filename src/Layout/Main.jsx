@@ -5,7 +5,6 @@ import Navbar from "../Pages/Navbar";
 const Main = () => {
   return (
     <div className="relative">
-      <Navbar />
       <Outlet />
     </div>
   );
