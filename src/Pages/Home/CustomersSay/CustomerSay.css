@@ -1,0 +1,8 @@
+.main€-div {
+  background: rgb(0, 99, 116);
+  background: linear-gradient(
+    174deg,
+    rgba(0, 99, 116, 1) 16%,
+    rgba(2, 6, 23, 1) 71%
+  );
+}
