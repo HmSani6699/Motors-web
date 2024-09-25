@@ -95,13 +95,15 @@ const Footer = () => {
         <img className="mt-[20px]" src={footer} alt="" />
       </div>
 
-      <div className="max-w-[1305px] flex flex-col lg:flex-row  lg:mx-mx-auto  mx-[24px] items-center justify-between mt-[40px] border-b-2 border-[#ffffff21] pb-[30px]">
-        <div className="flex gap-2 lg:mb-0 mb-[36px]">
+      <div className="lg:max-w-[1305px] flex  justify-between flex-col lg:flex-row  lg:mx-auto  mx-[24px]  mt-[40px] border-b-2 border-[#ffffff21] pb-[30px]">
+        <div className="flex justify-center gap-2 lg:mb-0 mb-[36px]">
           <img src={logo} alt="" />
-          <h2 className="text-[24px] font-[600] text-white">Motors Bay</h2>
+          <h2 className="text-[24px] font-[600] text-white whitespace-nowrap">
+            Motors Bay
+          </h2>
         </div>
 
-        <div className="flex md:px-[100px] items-center lg:justify-normal justify-between w-full  lg:gap-[40px] ">
+        <div className="flex  md:px-[150px] px-0 lg:px-0 items-center lg:justify-end justify-between lg:gap-[40px] ">
           <Link className=" bg-[#ffffff21] text-white rounded-[20px] py-[8px] px-[12px] font-[500]">
             Home
           </Link>
