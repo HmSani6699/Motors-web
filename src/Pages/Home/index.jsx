@@ -13,8 +13,8 @@ const Home = () => {
     <div className="relative">
       <Navbar />
       <Banner />
-      {/* <Hero />
-      <Quality />
+      <Hero />
+      {/*   <Quality />
       <BestSelling />
       <CustomersSay />
       <Innovations />
