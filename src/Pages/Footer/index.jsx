@@ -7,13 +7,13 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="main-div relative overflow-hidden">
-      <div className="max-w-[1376px] mx-auto relative pt-[70px] ">
+      <div className="max-w-[1376px] mx-auto relative pt-[70px] hidden lg:block ">
         <div className="absolute top-[60px] pl-[60px]">
           <h2 className="text-[48px] font-[700] text-white font-avenir">
             Reach Out to Us
           </h2>
         </div>
-        <div className=" relative">
+        <div className=" relative hidden lg:block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="100%"
@@ -73,13 +73,33 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-[1305px] mx-auto flex items-center justify-between mt-[40px] border-b-2 border-[#ffffff21] pb-[30px]">
-        <div className="flex gap-2">
+
+      <div className="bg-[#ffffff1a]  mx-[24px] block lg:hidden mt-[24px] p-[16px] ">
+        <h2 className="text-[24px] font-[700] text-white font-avenir text-center">
+          Reach Out to Us
+        </h2>
+        <p className="text-[16px] font-[500] leading-[24px] text-center text-white mt-[16px] mb-[16px] font-avenir">
+          Lorem ipsum dolor sit amet consectetur. Felis eget elementum malesuada
+          sit morbi nibh elit lectus morbi. Semper mi sit risus lorem cursus
+          erat. Ut iaculis mi dignissim ut vel ultrices ornare. Risus sed eu eu
+          nunc molestie aenean fusce dignissim. Malesuada odio nibh faucibus at
+          leo.
+        </p>
+        <div className="flex items-center justify-center">
+          <button className="py-[16px] px-[50px] rounded-[8px] bg-white text-[#141414] font-[500]">
+            Contact us
+          </button>
+        </div>
+        <img className="mt-[20px]" src={footer} alt="" />
+      </div>
+
+      <div className="max-w-[1305px] flex flex-col lg:flex-row  lg:mx-mx-auto  mx-[24px] items-center justify-between mt-[40px] border-b-2 border-[#ffffff21] pb-[30px]">
+        <div className="flex gap-2 lg:mb-0 mb-[36px]">
           <img src={logo} alt="" />
           <h2 className="text-[24px] font-[600] text-white">Motors Bay</h2>
         </div>
 
-        <div className="flex items-center gap-[40px] ">
+        <div className="flex items-center lg:justify-normal justify-between w-full lg:gap-[40px] ">
           <Link className=" bg-[#ffffff21] text-white rounded-[20px] py-[8px] px-[12px] font-[500]">
             Home
           </Link>
@@ -95,7 +115,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="pb-[56px] mt-[36px] text-white max-w-[1305px] mx-auto flex items-center justify-between">
+      <div className=" pb-[24px] lg:pb-[56px] mt-[36px] text-white max-w-[1305px] mx-auto flex lg:flex-row flex-col lg:gap-0 gap-[10px] items-center justify-between">
         <p className="text-[14px] font-[400] text-[#BDBDBD]">
           ©2024 Motorbay, All Rights Reserved.
         </p>
