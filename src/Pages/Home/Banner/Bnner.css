@@ -1,7 +1,6 @@
-/* Swiper pagination bullets */
 .swiper-pagination-bullet {
-  background-color: #bdbdbd; /* Inactive bullet color */
-  opacity: 1; /* Ensure bullets are fully opaque */
+  background-color: #bdbdbd !important; /* Inactive bullet color */
+  opacity: 1 !important; /* Ensure bullets are fully opaque */
 }
 
 .swiper-pagination-bullet-active {

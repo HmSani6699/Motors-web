@@ -56,14 +56,14 @@ const Banner = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <div className="relative h-[380px]">
+            <div className="relative h-[380px] md:h-[400px] w-full">
               <img
-                className="h-full"
+                className="h-full w-full"
                 src={mobileBanner}
                 alt="Mobile Banner 1"
               />
 
-              <div className=" w-full absolute top-[32px] z-10 text-center flex items-center justify-center  ">
+              <div className=" w-full absolute inset-0 z-10 text-center flex items-center justify-center  ">
                 <div>
                   <h2 className="text-[40px] font-[700] text-white leading-[48px]">
                     Meet the GR Corolla Power Beyond Limits
