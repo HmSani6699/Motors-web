@@ -2,8 +2,8 @@ import React from "react";
 
 const ViewCard = ({ image }) => {
   return (
-    <div>
-      <div className="w-[555px] h-[574px] relative">
+    <div className="lg:w-[555px]  w-[343px]">
+      <div className=" h-[354px] lg:h-[574px] relative">
         <img className="h-full w-full" src={image} alt="" />
         <div className="absolute bottom-[26px] left-[24px]">
           <h2 className="mb-[16px] text-[32px] font-[700] text-white">
