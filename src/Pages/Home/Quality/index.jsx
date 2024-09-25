@@ -4,7 +4,7 @@ import quality_image2 from "../../../../public/images/quality2.png";
 
 const Quality = () => {
   return (
-    <div className="max-w-[1376px] lg:mx-auto lg:mt-[120px] md:mt-[64px] mt-[32px] mx-[24px] ">
+    <div className="max-w-[1376px] lg:mx-auto lg:pt-[120px] md:pt-[64px] pt-[32px] mx-[24px] ">
       <div className="lg:flex items-center w-full mb-[50px]">
         <div className="lg:w-[40%]">
           <h2 className="lg:text-[48px] md:text-[32px] text-[24px] font-[700] text-[#141414] lg:leading-[57px] leading-[28px] mb-[16px] text-center lg:text-left ">
