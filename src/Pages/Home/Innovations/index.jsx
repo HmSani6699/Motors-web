@@ -11,9 +11,9 @@ import "swiper/css";
 const Innovations = () => {
   return (
     <div className="max-w-[1376px] lg:mx-auto  mb-[32px] lg:mb-[135px]">
-      <div className="lg:flex lg:mt-[120px] mt-[32px] lg:mb-[50px] mb-[24px] lg:mx-0 mx-[24px]">
+      <div className="lg:flex lg:mt-[120px] md:mt-[64px] mt-[32px] lg:mb-[50px] mb-[24px] lg:mx-0 mx-[24px]">
         <div className="lg:w-[40%]">
-          <h2 className="text-[24px] lg:text-[48px] font-[700] text-[#141414] text-center lg:text-left leading-[28px] lg:leading-[57px] font-avenir mb-[16px] lg:mb-0">
+          <h2 className="text-[24px] md:text-[32px] lg:text-[48px] font-[700] text-[#141414] text-center lg:text-left leading-[28px] lg:leading-[57px] font-avenir mb-[16px] lg:mb-0">
             From the Garage: <br className="hidden lg:block" /> Insights &
             Innovations
           </h2>

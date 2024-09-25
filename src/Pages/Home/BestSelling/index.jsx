@@ -15,14 +15,11 @@ import "swiper/css";
 
 const BestSelling = () => {
   return (
-    <div className="max-w-[1376px] mx-auto mb-[32px] lg:mb-[121px]">
+    <div className="max-w-[1376px] mx-auto md:mb-[64px] mb-[32px] lg:mb-[121px]">
       <div className="lg:flex mt-[50px] lg:mt-[90px] lg:mb-[50px] mx-[24px] lg:mx-0">
         <div className="lg:w-[40%]">
-          <h2 className="text-[48px] lg:block hidden font-[700] text-[#141414] leading-[57px] ">
-            Our Best-Selling <br /> Models
-          </h2>
-          <h2 className="text-[24px] lg:hidden block mb-[16px] font-[700] text-[#141414] leading-[28px] text-center ">
-            Our Best-Selling Models
+          <h2 className="lg:text-[48px] text-[24px]  text-center lg:text-left mb-[16px]  md:text-[32px] font-[700] text-[#141414] lg:leading-[57px] leading-[28px] ">
+            Our Best-Selling <br className="hidden lg:block" /> Models
           </h2>
         </div>
         <div className="lg:w-[60%]">

@@ -56,7 +56,7 @@ const Banner = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <div className="relative h-[380px] md:h-[400px] w-full">
+            <div className="relative h-[380px] md:h-[450px] w-full">
               <img
                 className="h-full w-full"
                 src={mobileBanner}
@@ -65,10 +65,10 @@ const Banner = () => {
 
               <div className=" w-full absolute inset-0 z-10 text-center flex items-center justify-center  ">
                 <div>
-                  <h2 className="text-[40px] font-[700] text-white leading-[48px]">
+                  <h2 className="text-[40px]  md:text-[64px] font-[700] text-white md:leading-[76px] leading-[48px]">
                     Meet the GR Corolla Power Beyond Limits
                   </h2>
-                  <p className="text-[16px] text-white font-[500] leading-[24px] mt-[16px]">
+                  <p className="text-[16px] md:text-[24px] text-white font-[500] md:leading-[28px] leading-[24px] mt-[16px]">
                     Unleash the thrill of driving with unmatched performance and
                     dynamic design.
                   </p>
@@ -80,19 +80,19 @@ const Banner = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="relative h-[380px]">
+            <div className="relative h-[380px] md:h-[450px] w-full">
               <img
-                className="h-full"
+                className="h-full w-full"
                 src={mobileBanner}
                 alt="Mobile Banner 1"
               />
 
-              <div className=" w-full absolute top-[32px] z-10 text-center flex items-center justify-center  ">
+              <div className=" w-full absolute inset-0 z-10 text-center flex items-center justify-center  ">
                 <div>
-                  <h2 className="text-[40px] font-[700] text-white leading-[48px]">
+                  <h2 className="text-[40px]  md:text-[64px] font-[700] text-white md:leading-[76px] leading-[48px]">
                     Meet the GR Corolla Power Beyond Limits
                   </h2>
-                  <p className="text-[16px] text-white font-[500] leading-[24px] mt-[16px]">
+                  <p className="text-[16px] md:text-[24px] text-white font-[500] md:leading-[28px] leading-[24px] mt-[16px]">
                     Unleash the thrill of driving with unmatched performance and
                     dynamic design.
                   </p>
@@ -104,43 +104,19 @@ const Banner = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="relative h-[380px]">
+            <div className="relative h-[380px] md:h-[450px] w-full">
               <img
-                className="h-full"
+                className="h-full w-full"
                 src={mobileBanner}
                 alt="Mobile Banner 1"
               />
 
-              <div className=" w-full absolute top-[32px] z-10 text-center flex items-center justify-center  ">
+              <div className=" w-full absolute inset-0 z-10 text-center flex items-center justify-center  ">
                 <div>
-                  <h2 className="text-[40px] font-[700] text-white leading-[48px]">
+                  <h2 className="text-[40px]  md:text-[64px] font-[700] text-white md:leading-[76px] leading-[48px]">
                     Meet the GR Corolla Power Beyond Limits
                   </h2>
-                  <p className="text-[16px] text-white font-[500] leading-[24px] mt-[16px]">
-                    Unleash the thrill of driving with unmatched performance and
-                    dynamic design.
-                  </p>
-                  <button className="py-[16px] px-[24px] bg-[#2498E2] text-white mt-[32px] rounded-[8px]">
-                    Explore more
-                  </button>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="relative h-[380px]">
-              <img
-                className="h-full"
-                src={mobileBanner}
-                alt="Mobile Banner 1"
-              />
-
-              <div className=" w-full absolute top-[32px] z-10 text-center flex items-center justify-center  ">
-                <div>
-                  <h2 className="text-[40px] font-[700] text-white leading-[48px]">
-                    Meet the GR Corolla Power Beyond Limits
-                  </h2>
-                  <p className="text-[16px] text-white font-[500] leading-[24px] mt-[16px]">
+                  <p className="text-[16px] md:text-[24px] text-white font-[500] md:leading-[28px] leading-[24px] mt-[16px]">
                     Unleash the thrill of driving with unmatched performance and
                     dynamic design.
                   </p>

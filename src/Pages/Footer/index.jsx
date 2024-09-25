@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="main-div relative overflow-hidden">
+      {/* =======> Pc Footer part <======== */}
       <div className="max-w-[1376px] mx-auto relative pt-[70px] hidden lg:block ">
         <div className="absolute top-[60px] pl-[60px]">
           <h2 className="text-[48px] font-[700] text-white font-avenir">
@@ -74,7 +75,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-[#ffffff1a]  mx-[24px] block lg:hidden mt-[24px] p-[16px] ">
+      {/* ========> Mobile Nad Tab €footer jpart <======== */}
+      <div className="bg-[#ffffff1a]  mx-[24px] md:mx-[50px] md:mt-[50px] block lg:hidden mt-[24px] p-[16px]  md:px-[60px]">
         <h2 className="text-[24px] font-[700] text-white font-avenir text-center">
           Reach Out to Us
         </h2>
@@ -99,7 +101,7 @@ const Footer = () => {
           <h2 className="text-[24px] font-[600] text-white">Motors Bay</h2>
         </div>
 
-        <div className="flex items-center lg:justify-normal justify-between w-full lg:gap-[40px] ">
+        <div className="flex md:px-[100px] items-center lg:justify-normal justify-between w-full  lg:gap-[40px] ">
           <Link className=" bg-[#ffffff21] text-white rounded-[20px] py-[8px] px-[12px] font-[500]">
             Home
           </Link>
@@ -115,7 +117,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className=" pb-[24px] lg:pb-[56px] mt-[36px] text-white max-w-[1305px] mx-auto flex lg:flex-row flex-col lg:gap-0 gap-[10px] items-center justify-between">
+      <div className=" pb-[24px] md:pb-[40px] lg:pb-[56px] mt-[36px] md:mt-[24px] text-white max-w-[1305px] mx-auto flex lg:flex-row md:flex-row md:px-[20px] flex-col lg:gap-0 gap-[10px] items-center justify-between">
         <p className="text-[14px] font-[400] text-[#BDBDBD]">
           ©2024 Motorbay, All Rights Reserved.
         </p>
