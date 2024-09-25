@@ -1,18 +1,20 @@
 import React from "react";
 
-const ViewCard = ({ image }) => {
+const ViewCard = ({ title, description, value, image }) => {
   return (
-    <div className="lg:w-[555px]  w-[343px]">
-      <div className=" h-[354px] lg:h-[574px] relative">
+    // <div className="lg:w-[555px]  w-[343px]">
+    <div className="w-full">
+      <div
+        className={`${
+          value === "home" ? "h-[354px] lg:h-[574px]" : "h-[354px] lg:h-[452px]"
+        }   relative`}
+      >
         <img className="h-full w-full" src={image} alt="" />
         <div className="absolute bottom-[26px] left-[24px]">
           <h2 className="mb-[16px] text-[32px] font-[700] text-white">
-            Range Rover
+            {title}
           </h2>
-          <p className="text-[14px] font-[400] text-white">
-            These are the vehicles that have captured the hearts of drivers
-            everywhere. Explore our top-selling models
-          </p>
+          <p className="text-[14px] font-[400] text-white">{description}</p>
         </div>
       </div>
 

@@ -36,7 +36,13 @@ const BestSelling = () => {
         <div className="flex  gap-[32px]">
           {/* =========> Left Site <======= */}
           <div>
-            <ViewCard image={card_image1} />
+            <ViewCard
+              value={"home"}
+              image={card_image1}
+              title="Range Rover"
+              description="  These are the vehicles that have captured the hearts of drivers
+            everywhere. Explore our top-selling models"
+            />
           </div>
           {/* =========> Right Site <======= */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[32px]">
