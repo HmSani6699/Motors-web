@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ViewCard = ({ title, description, value, image }) => {
   return (
@@ -18,9 +19,11 @@ const ViewCard = ({ title, description, value, image }) => {
         </div>
       </div>
 
-      <button className="border-2 w-full mt-[24px] border-[#2498E2] text-[#2498E2] py-[15px] rounded-[8px] ">
-        View details
-      </button>
+      <Link to={"/stock/details"}>
+        <button className="border-2 w-full mt-[24px] border-[#2498E2] text-[#2498E2] py-[15px] rounded-[8px] ">
+          View details
+        </button>
+      </Link>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home";
 import About from "../Pages/About";
 import Gallery from "../Pages/Gallery";
+import CardDetails from "../component/CardDetails";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/stock",
         element: <Gallery />,
+      },
+      {
+        path: "/stock/details",
+        element: <CardDetails />,
       },
     ],
   },
