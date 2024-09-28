@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card_details::-webkit-scrollbar {
+  display: none;
+}

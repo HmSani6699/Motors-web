@@ -2,16 +2,16 @@ import React from "react";
 
 const Specifications = () => {
   return (
-    <div className="lg:mt-[64px]">
-      <h2 className="lg:text-[32px] font-[700] lg:leading-[38px] text-[#141414] font-avenir lg:mb-[24px]">
+    <div id="Specifications" className="lg:mt-[64px]">
+      <h2 className="lg:text-[32px] text-[24px] font-[700] leading-[28px] lg:leading-[38px] text-[#141414] font-avenir mb-[24px]">
         Specifications
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-x-[67px] gap-y-[40px]">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-x-[67px] gap-y-[40px]">
         <div className="border-b-2 border-[#000] pb-[10px]">
           <h2 className="lg:text-[20px] text-[#141414] font-[500] lg:leading-[30px] ">
             Engine Type
           </h2>
-          <h3 className="lg:text-[24px] text-[#141414] font-[600] lg:leading-[28px] lg:mt-[16px]">
+          <h3 className="lg:text-[24px] text-[16px] text-[#141414] font-[600] lg:leading-[28px] lg:mt-[16px]">
             3.5L V6 Hybrid
           </h3>
         </div>
@@ -19,7 +19,7 @@ const Specifications = () => {
           <h2 className="lg:text-[20px] text-[#141414] font-[500] lg:leading-[30px] ">
             Horsepower
           </h2>
-          <h3 className="lg:text-[24px] text-[#141414] font-[600] lg:leading-[28px] lg:mt-[16px]">
+          <h3 className="lg:text-[24px] text-[16px] text-[#141414] font-[600] lg:leading-[28px] lg:mt-[16px]">
             345 HP
           </h3>
         </div>

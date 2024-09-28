@@ -4,6 +4,7 @@ import card_image2 from "../../../../public/card/image9.png";
 import card_image3 from "../../../../public/card/image10.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import arrow_image from "../../../../public/svg/ArrowImage.svg";
+import banner_img from "../../../../public/images/cardDetails.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -21,13 +22,13 @@ const CardDetailsGallery = () => {
   };
 
   return (
-    <div className="lg:mt-[64px] lg:mb-[24px]">
-      <h2 className="lg:text-[32px] font-[700] lg:leading-[38px] text-[#141414] font-avenir lg:mb-[24px]">
+    <div id="Gallery" className="mt-[32px] lg:mt-[64px] mb-[24px]">
+      <h2 className="lg:text-[32px] text-[24px] font-[700] lg:leading-[38px] text-[#141414] font-avenir mb-[24px]">
         Gallery
       </h2>
 
-      {/*=====> Card Slider <====== */}
-      <div>
+      {/*=====> Card Slider in Pc device  <====== */}
+      <div className="hidden lg:block">
         <Swiper
           ref={swiperRef} // Attach the reference to Swiper
           onSlideChange={handleSlideChange} // Handle slide change
@@ -210,6 +211,34 @@ const CardDetailsGallery = () => {
             <img src={arrow_image} alt="Next" />
           </button>
         </div>
+      </div>
+
+      {/* ======> Card Slider in Mobile and Tab Device <======= */}
+      <div className="block lg:hidden">
+        <Swiper
+          pagination={{ clickable: true }} // Enable clickable pagination
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide className="rounded-[15px]">
+            <div className="relative h-[286px]  md:h-[594px]  w-full">
+              <img
+                className=" h-full rounded-[15px]  w-full"
+                src={banner_img}
+                alt="Mobile Banner 1"
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="rounded-[15px]">
+            <div className="relative h-[286px]  md:h-[594px]  w-full">
+              <img
+                className=" h-full rounded-[15px]  w-full"
+                src={banner_img}
+                alt="Mobile Banner 1"
+              />
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </div>
   );
