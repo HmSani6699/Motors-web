@@ -1,10 +1,10 @@
 import React from "react";
 
-const Aerodynamics = () => {
+const Technology = () => {
   return (
-    <div className="mt-[48px]">
+    <div className="mt-[80px]">
       <h2 className="lg:text-[32px] font-[600] leading-[38px] text-[#141414] font-avenir">
-        Aerodynamics and Art Deco: The Rise of Streamline Design
+        Technology, Efficiency, and the Return to Simplicity
       </h2>
       <div className="flex gap-2 mt-[32px]">
         <div className="h-[8px]  w-[15px] rounded-3xl mt-2 bg-black"></div>
@@ -65,4 +65,4 @@ const Aerodynamics = () => {
   );
 };
 
-export default Aerodynamics;
+export default Technology;
