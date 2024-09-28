@@ -6,6 +6,8 @@ import Specifications from "./Specifications";
 import CardDetailsGallery from "./CardDetailsGallery";
 import Features from "./Features";
 import Performance from "./Performance";
+import DiscoverMore from "./DiscoverMore";
+import Footer from "../../Pages/Footer";
 
 const CardDetails = () => {
   return (
@@ -30,7 +32,10 @@ const CardDetails = () => {
         <CardDetailsGallery/>
         <Features/>
         <Performance/>
+        <DiscoverMore/>
+
       </div>
+      <Footer/>
     </div>
   );
 };
