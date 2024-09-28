@@ -36,7 +36,7 @@ const Specifications = () => {
             Fuel Efficiency
           </h2>
           <h3 className="lg:text-[24px] text-[#141414] font-[600] lg:leading-[28px] lg:mt-[16px] whitespace-nowrap">
-            25 MPG city / 34 MPG highway
+            25 MPG city / 34 MPG 
           </h3>
         </div>
         <div className="border-b-2 border-[#000] pb-[10px]">
