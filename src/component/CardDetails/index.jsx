@@ -3,6 +3,7 @@ import Navbar from "../../Pages/Navbar";
 import CardDetailsBanner from "./CardDetailsBanner";
 import Introduction from "./Introduction";
 import Specifications from "./Specifications";
+import CardDetailsGallery from "./CardDetailsGallery";
 
 const CardDetails = () => {
   return (
@@ -24,6 +25,7 @@ const CardDetails = () => {
         </div>
         <Introduction />
         <Specifications />
+        <CardDetailsGallery/>
       </div>
     </div>
   );
