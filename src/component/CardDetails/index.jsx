@@ -4,6 +4,8 @@ import CardDetailsBanner from "./CardDetailsBanner";
 import Introduction from "./Introduction";
 import Specifications from "./Specifications";
 import CardDetailsGallery from "./CardDetailsGallery";
+import Features from "./Features";
+import Performance from "./Performance";
 
 const CardDetails = () => {
   return (
@@ -26,6 +28,8 @@ const CardDetails = () => {
         <Introduction />
         <Specifications />
         <CardDetailsGallery/>
+        <Features/>
+        <Performance/>
       </div>
     </div>
   );
