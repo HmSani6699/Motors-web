@@ -18,7 +18,7 @@ const CardDetails = () => {
       <CardDetailsBanner />
       <div className="max-w-[1367px] mx-auto">
         {/* ======> Tab part <===== */}
-        <div className="max-w-[1376px] mx-auto flex items-center gap-[89px] lg:mt-[56px] lg:mb-[64px]">
+        {/* <div className="max-w-[1376px] mx-auto flex items-center gap-[89px] lg:mt-[56px] lg:mb-[64px]">
           <button className="text-[#2498E2] text-[16px] font-[600]">
             Overview
           </button>
@@ -29,13 +29,12 @@ const CardDetails = () => {
         </div>
         <Introduction />
         <Specifications />
-        <CardDetailsGallery/>
-        <Features/>
-        <Performance/>
-        <DiscoverMore/>
-
+        <CardDetailsGallery />
+        <Features />
+        <Performance />
+        <DiscoverMore /> */}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
