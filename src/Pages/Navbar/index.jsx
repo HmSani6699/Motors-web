@@ -53,12 +53,27 @@ const Navbar = () => {
           } bg-white absolute top-[60px] w-full px-[20px]`}
         >
           <div className=" flex flex-col  gap-[24px] mt-[25px]">
-            <Link className="text-[#141414] text-[20px] font-[400]">Home</Link>
-            <Link className="text-[#141414] text-[20px] font-[400]">
+            <Link to={"/"} className="text-[#141414] text-[20px] font-[400]">
+              Home
+            </Link>
+            <Link
+              to={"about"}
+              className="text-[#141414] text-[20px] font-[400]"
+            >
               About Us
             </Link>
-            <Link className="text-[#141414] text-[20px] font-[400]">Stock</Link>
-            <Link className="text-[#141414] text-[20px] font-[400]">Blog</Link>
+            <Link
+              to={"/stock"}
+              className="text-[#141414] text-[20px] font-[400]"
+            >
+              Stock
+            </Link>
+            <Link
+              to={"/blog"}
+              className="text-[#141414] text-[20px] font-[400]"
+            >
+              Blog
+            </Link>
             <div>
               <button className="py-[16px] px-[35px] rounded-[8px] bg-[#2498E2] font-[500] text-white">
                 Contact us

@@ -18,11 +18,11 @@ const DiscoverMore = () => {
         <h2 className="lg:text-[48px] text-[24px] font-[700] lg:leading-[57px] text-[#141414] font-avenir ">
           Discover More
         </h2>
-        <button className="bg-[#2498E2] lg:block hidden text-white py-[16px] px-[24px] font-[500] rounded-[8px]">
+        <button className="bg-[#2498E2] lg:block md:block hidden text-white py-[16px] px-[24px] font-[500] rounded-[8px]">
           View more
         </button>
 
-        <button className="lg:hidden block text-[#2498E2] py-[16px] px-[24px] font-[500] rounded-[8px]">
+        <button className="lg:hidden md:hidden block text-[#2498E2] py-[16px] px-[24px] font-[500] rounded-[8px]">
           View more
         </button>
       </div>
