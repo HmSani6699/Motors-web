@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="max-w-[1220px] mx-auto lg:flex items-center justify-between gap-[90px] mt-[50px] px-[24px] lg:px-0">
+    <div className="max-w-[1220px] mx-auto lg:flex items-center justify-between gap-[90px] mt-[30px] md:mt-[64px] lg:mt-[70px] px-[24px] lg:px-0">
       <div className={``}>
         <h2 className="text-[48px] font-[700] lg:mb-[40px] pb-[16px] mb-[24px] text-center lg:text-left border-b-2 lg:border-b-0 ">
           8K+

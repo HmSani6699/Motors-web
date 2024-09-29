@@ -4,16 +4,18 @@ import Navlink from "../../component/Navlink/Navlink";
 import menu from "../../../public/images/menu-alt-2.png";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ viewNav }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="absolute top-0 w-full z-10">
+    <nav className="absolute top-0 w-full z-10 mt-[15px]">
       {/* =========> PC nav <====== */}
       <div className="max-w-[1376px] mx-auto  items-center justify-between h-[60px] hidden lg:flex">
         {/* =======> Left site <======= */}
         <div className="flex items-center gap-[10px]">
           <img src={logo} alt="" />
-          <h2 className="text-[21px] font-[600] font-avenir">Motors Bay</h2>
+          <h2 className="text-[21px] font-[600] font-avenir text-white">
+            Motors Bay
+          </h2>
         </div>
         {/* =======> Middle site <======= */}
         <div className=" flex items-center gap-[60px] mt-[25px]">
