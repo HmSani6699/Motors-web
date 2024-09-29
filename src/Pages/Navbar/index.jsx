@@ -25,9 +25,11 @@ const Navbar = () => {
 
         {/* =======> Right site <======= */}
         <div>
-          <button className="py-[16px] px-[35px] rounded-[8px] bg-[#2498E2] font-[500] text-white">
-            Contact us
-          </button>
+          <Link to="/contact">
+            <button className="py-[16px] px-[35px] rounded-[8px] bg-[#2498E2] font-[500] text-white">
+              Contact us
+            </button>
+          </Link>
         </div>
       </div>
       {/* =========> Mobile and Tab nav <====== */}
@@ -75,9 +77,11 @@ const Navbar = () => {
               Blog
             </Link>
             <div>
-              <button className="py-[16px] px-[35px] rounded-[8px] bg-[#2498E2] font-[500] text-white">
-                Contact us
-              </button>
+              <Link to="/contact">
+                <button className="py-[16px] px-[35px] rounded-[8px] bg-[#2498E2] font-[500] text-white">
+                  Contact us
+                </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -6,6 +6,7 @@ import Gallery from "../Pages/Gallery";
 import CardDetails from "../component/CardDetails";
 import Blog from "../Pages/Blog";
 import BlogDetails from "../component/BlogDetails";
+import Contact from "../Pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/blog/details/:id",
         element: <BlogDetails />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },
