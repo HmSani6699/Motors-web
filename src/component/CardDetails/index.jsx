@@ -26,7 +26,7 @@ const CardDetails = () => {
   return (
     <div className="">
       <div>
-        <Navbar />
+        <Navbar viewNav="cardDetails" />
       </div>
       <CardDetailsBanner />
       <div className="max-w-[1367px] px-[20px] lg:px-0   mx-auto">

@@ -10,7 +10,7 @@ import Footer from "../Footer";
 
 const Gallery = () => {
   return (
-    <div className="mt-[15px] ">
+    <div className="">
       <Navbar />
       <div className="lg:pt-[120px] pt-[90px] max-w-[1376px] mx-auto">
         <div className="lg:flex items-center">

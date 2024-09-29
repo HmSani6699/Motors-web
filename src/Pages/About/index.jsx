@@ -8,7 +8,7 @@ import Footer from "../Footer";
 
 const About = () => {
   return (
-    <div className="mt-[15px]">
+    <div className="">
       <Navbar />
       <div className="pt-[60px]">
         <Quality />

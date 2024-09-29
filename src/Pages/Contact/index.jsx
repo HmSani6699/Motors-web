@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
-    <div className="mt-[15px] ">
+    <div className="">
       <Navbar />
 
       <div className="lg:pt-[170px] pt-[80px]  w-full lg:flex md:px-[100px] items-center justify-center lg:px-0 px-[20px]">

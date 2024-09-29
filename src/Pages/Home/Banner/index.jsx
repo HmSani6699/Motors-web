@@ -70,6 +70,126 @@ const Banner = () => {
             </div>
           </div>
         </SwiperSlide>
+        <SwiperSlide>
+          <div className="relative h-[470px] lg:h-[950px]  md:h-[500px] w-full">
+            <img
+              className="h-full w-full object-cover"
+              src={banner_img}
+              alt="Mobile Banner 1"
+            />
+            <div className="absolute top-0 h-full w-full">
+              <div className="flex items-center max-w-[1376px] mx-auto lg:pl-[50px] px-[50px] md:px-[70px] lg:px-0 h-full">
+                <div>
+                  <h2 className="text-white text-[40px] lg:text-[64px] font-[700] text-center lg:text-left leading-[48px] lg:leading-[74px]">
+                    Meet the GR <br className="lg:block hidden" /> Corolla Power{" "}
+                    <br className="lg:block hidden" />
+                    Beyond Limits
+                  </h2>
+                  <p className="text-white mt-[16px] text-[16px] lg:text-[24px] font-[500] text-center lg:text-left leading-[24px] lg:leading-[28px]">
+                    Unleash the thrill of driving with unmatched{" "}
+                    <br className="lg:block hidden" /> performance and dynamic
+                    design.
+                  </p>
+                  <div className="mt-[32px] flex items-center justify-center lg:block">
+                    <button className="py-[16px] px-[35px] rounded-[8px] bg-[#2498E2] font-[500] text-white">
+                      Explore more
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="relative h-[470px] lg:h-[950px]  md:h-[500px] w-full">
+            <img
+              className="h-full w-full object-cover"
+              src={banner_img}
+              alt="Mobile Banner 1"
+            />
+            <div className="absolute top-0 h-full w-full">
+              <div className="flex items-center max-w-[1376px] mx-auto lg:pl-[50px] px-[50px] md:px-[70px] lg:px-0 h-full">
+                <div>
+                  <h2 className="text-white text-[40px] lg:text-[64px] font-[700] text-center lg:text-left leading-[48px] lg:leading-[74px]">
+                    Meet the GR <br className="lg:block hidden" /> Corolla Power{" "}
+                    <br className="lg:block hidden" />
+                    Beyond Limits
+                  </h2>
+                  <p className="text-white mt-[16px] text-[16px] lg:text-[24px] font-[500] text-center lg:text-left leading-[24px] lg:leading-[28px]">
+                    Unleash the thrill of driving with unmatched{" "}
+                    <br className="lg:block hidden" /> performance and dynamic
+                    design.
+                  </p>
+                  <div className="mt-[32px] flex items-center justify-center lg:block">
+                    <button className="py-[16px] px-[35px] rounded-[8px] bg-[#2498E2] font-[500] text-white">
+                      Explore more
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="relative h-[470px] lg:h-[950px]  md:h-[500px] w-full">
+            <img
+              className="h-full w-full object-cover"
+              src={banner_img}
+              alt="Mobile Banner 1"
+            />
+            <div className="absolute top-0 h-full w-full">
+              <div className="flex items-center max-w-[1376px] mx-auto lg:pl-[50px] px-[50px] md:px-[70px] lg:px-0 h-full">
+                <div>
+                  <h2 className="text-white text-[40px] lg:text-[64px] font-[700] text-center lg:text-left leading-[48px] lg:leading-[74px]">
+                    Meet the GR <br className="lg:block hidden" /> Corolla Power{" "}
+                    <br className="lg:block hidden" />
+                    Beyond Limits
+                  </h2>
+                  <p className="text-white mt-[16px] text-[16px] lg:text-[24px] font-[500] text-center lg:text-left leading-[24px] lg:leading-[28px]">
+                    Unleash the thrill of driving with unmatched{" "}
+                    <br className="lg:block hidden" /> performance and dynamic
+                    design.
+                  </p>
+                  <div className="mt-[32px] flex items-center justify-center lg:block">
+                    <button className="py-[16px] px-[35px] rounded-[8px] bg-[#2498E2] font-[500] text-white">
+                      Explore more
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="relative h-[470px] lg:h-[950px]  md:h-[500px] w-full">
+            <img
+              className="h-full w-full object-cover"
+              src={banner_img}
+              alt="Mobile Banner 1"
+            />
+            <div className="absolute top-0 h-full w-full">
+              <div className="flex items-center max-w-[1376px] mx-auto lg:pl-[50px] px-[50px] md:px-[70px] lg:px-0 h-full">
+                <div>
+                  <h2 className="text-white text-[40px] lg:text-[64px] font-[700] text-center lg:text-left leading-[48px] lg:leading-[74px]">
+                    Meet the GR <br className="lg:block hidden" /> Corolla Power{" "}
+                    <br className="lg:block hidden" />
+                    Beyond Limits
+                  </h2>
+                  <p className="text-white mt-[16px] text-[16px] lg:text-[24px] font-[500] text-center lg:text-left leading-[24px] lg:leading-[28px]">
+                    Unleash the thrill of driving with unmatched{" "}
+                    <br className="lg:block hidden" /> performance and dynamic
+                    design.
+                  </p>
+                  <div className="mt-[32px] flex items-center justify-center lg:block">
+                    <button className="py-[16px] px-[35px] rounded-[8px] bg-[#2498E2] font-[500] text-white">
+                      Explore more
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
       </Swiper>
       {/* Arrow Buttons for Navigation */}
       <div className="absolute bottom-[30px] lg:bottom-[50px] px-[100px] w-full z-20">

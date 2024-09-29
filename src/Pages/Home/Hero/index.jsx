@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div className="max-w-[1220px] mx-auto lg:flex items-center justify-between gap-[90px] mt-[30px] md:mt-[64px] lg:mt-[70px] px-[24px] lg:px-0">
       <div className={``}>
-        <h2 className="text-[48px] font-[700] lg:mb-[40px] pb-[16px] mb-[24px] text-center lg:text-left border-b-2 lg:border-b-0 ">
+        <h2 className="text-[48px] font-[700] lg:mb-[40px] pb-[16px] mb-[24px] text-center lg:text-left border-b-2  ">
           8K+
         </h2>
         <p className=" text-[#141414] text-[20px] font-[400] lg:mb-0 mb-[24px] text-center lg:text-left">
@@ -13,7 +13,7 @@ const Hero = () => {
         </p>
       </div>
       <div>
-        <h2 className="text-[48px] font-[700] lg:mb-[40px] pb-[16px] mb-[24px] text-center lg:text-left border-b-2 lg:border-b-0 ">
+        <h2 className="text-[48px] font-[700] lg:mb-[40px] pb-[16px] mb-[24px] text-center lg:text-left border-b-2  ">
           10 Year
         </h2>
         <p className=" text-[#141414] text-[20px] font-[400] lg:mb-0 mb-[24px] text-center lg:text-left">
@@ -22,7 +22,7 @@ const Hero = () => {
         </p>
       </div>
       <div>
-        <h2 className="text-[48px] font-[700] lg:mb-[40px] pb-[16px] mb-[24px] text-center lg:text-left border-b-2 lg:border-b-0 ">
+        <h2 className="text-[48px] font-[700] lg:mb-[40px] pb-[16px] mb-[24px] text-center lg:text-left border-b-2  ">
           60+
         </h2>
         <p className=" text-[#141414] text-[20px] font-[400] lg:mb-0 mb-[24px] text-center lg:text-left">
