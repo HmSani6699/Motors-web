@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="main-div relative overflow-hidden">
+    <div className="relative overflow-hidden bg-cover  bg-[url('../../../public/images/cntactFooter.png')]">
       {/* =======> Pc Footer part <======== */}
       <div className="max-w-[1376px] mx-auto relative pt-[70px] hidden lg:block ">
         <div className="absolute top-[60px] pl-[60px]">
