@@ -23,7 +23,7 @@ const ViewCard = ({ data, description, value }) => {
         </div>
       </div>
 
-      <Link to={`/stock/details/${data?.id}`}>
+      <Link to={`/stock/details/${data?.documentId}`}>
         <button className="border-2 w-full mt-[24px] border-[#2498E2] text-[#2498E2] py-[15px] rounded-[8px] ">
           View details
         </button>

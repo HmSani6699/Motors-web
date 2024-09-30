@@ -1,6 +1,6 @@
 import React from "react";
 
-const Specifications = () => {
+const Specifications = ({ data }) => {
   return (
     <div id="Specifications" className="lg:mt-[64px]">
       <h2 className="lg:text-[32px] text-[24px] font-[700] leading-[28px] lg:leading-[38px] text-[#141414] font-avenir mb-[24px]">
@@ -12,7 +12,7 @@ const Specifications = () => {
             Engine Type
           </h2>
           <h3 className="lg:text-[24px] text-[16px] text-[#141414] font-[600] lg:leading-[28px] lg:mt-[16px]">
-            3.5L V6 Hybrid
+            {data?.engine_type}
           </h3>
         </div>
         <div className="border-b-2 border-[#000] pb-[10px]">
@@ -20,7 +20,7 @@ const Specifications = () => {
             Horsepower
           </h2>
           <h3 className="lg:text-[24px] text-[16px] text-[#141414] font-[600] lg:leading-[28px] lg:mt-[16px]">
-            345 HP
+            {data?.horsepower}
           </h3>
         </div>
         <div className="border-b-2 border-[#000] pb-[10px]">
@@ -28,7 +28,7 @@ const Specifications = () => {
             Transmission
           </h2>
           <h3 className="lg:text-[24px] text-[#141414] font-[600] lg:leading-[28px] lg:mt-[16px]">
-            10-Speed Automatic
+            {data?.transmission}
           </h3>
         </div>
         <div className="border-b-2 border-[#000] pb-[10px]">
@@ -36,7 +36,7 @@ const Specifications = () => {
             Fuel Efficiency
           </h2>
           <h3 className="lg:text-[24px] text-[#141414] font-[600] lg:leading-[28px] lg:mt-[16px] whitespace-nowrap">
-            25 MPG city / 34 MPG
+            {data?.fuel_efficiency}
           </h3>
         </div>
         <div className="border-b-2 border-[#000] pb-[10px]">
@@ -44,7 +44,7 @@ const Specifications = () => {
             Length
           </h2>
           <h3 className="lg:text-[24px] text-[#141414] font-[600] lg:leading-[28px] lg:mt-[16px]">
-            4,920 mm
+            {data?.length}
           </h3>
         </div>
         <div className="border-b-2 border-[#000] pb-[10px]">
@@ -52,7 +52,7 @@ const Specifications = () => {
             Width
           </h2>
           <h3 className="lg:text-[24px] text-[#141414] font-[600] lg:leading-[28px] lg:mt-[16px]">
-            1,840 mm
+            {data?.width}
           </h3>
         </div>
         <div className="border-b-2 border-[#000] pb-[10px]">
@@ -60,7 +60,7 @@ const Specifications = () => {
             Height
           </h2>
           <h3 className="lg:text-[24px] text-[#141414] font-[600] lg:leading-[28px] lg:mt-[16px]">
-            1,500 mm
+            {data?.height}
           </h3>
         </div>
       </div>

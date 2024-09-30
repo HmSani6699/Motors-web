@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar";
 import ViewCard from "../../component/ViewCard";
 
@@ -7,8 +7,28 @@ import prov from "../../../public/svg/Prev.svg";
 import next from "../../../public/svg/Next.svg";
 import more from "../../../public/svg/more.svg";
 import Footer from "../Footer";
+import { get } from "../../api/axios";
+const baseUrl = "http://localhost:1337";
 
 const Gallery = () => {
+  const [activeTab, setActiveTabe] = useState("all");
+  const [cardData, setCardData] = useState([]);
+
+  // ========> Handle get Best Selling data <=======//
+  useEffect(() => {
+    handleGetCardData();
+  }, []);
+
+  const handleGetCardData = async () => {
+    try {
+      const res = await get(`/api/cards?populate=image`);
+      console.log(res);
+      setCardData(res?.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="">
       <Navbar />
@@ -23,9 +43,94 @@ const Gallery = () => {
           </p>
         </div>
 
+        <div className=" card_details max-w-[1376px] mx-auto overflow-x-scroll lg:overflow-visible flex items-center lg:gap-[89px] gap-[50px] mt-[56px]  mb-[30px] lg:mb-[64px]">
+          <button
+            onClick={() => setActiveTabe("all")}
+            className={`py-[16px] px-[24px] text-[16px] font-[600] ${
+              activeTab === "all"
+                ? "border-b-2 border-[#2498E2] text-[#2498E2] bg-[#E2F0FC]"
+                : "text-[#7C7C7C]"
+            } `}
+          >
+            All
+          </button>
+          <button
+            onClick={() => setActiveTabe("Toyota")}
+            className={`py-[16px] px-[24px] text-[16px] font-[600] ${
+              activeTab === "Toyota"
+                ? "border-b-2 border-[#2498E2] text-[#2498E2] bg-[#E2F0FC]"
+                : "text-[#7C7C7C]"
+            } `}
+          >
+            Toyota
+          </button>
+          <button
+            onClick={() => setActiveTabe("Hyundai")}
+            className={`py-[16px] px-[24px] text-[16px] font-[600] ${
+              activeTab === "Hyundai"
+                ? "border-b-2 border-[#2498E2] text-[#2498E2] bg-[#E2F0FC]"
+                : "text-[#7C7C7C]"
+            } `}
+          >
+            Hyundai
+          </button>
+          <button
+            onClick={() => setActiveTabe("Lada")}
+            className={`py-[16px] px-[24px] text-[16px] font-[600] ${
+              activeTab === "Lada"
+                ? "border-b-2 border-[#2498E2] text-[#2498E2] bg-[#E2F0FC]"
+                : "text-[#7C7C7C]"
+            } `}
+          >
+            Lada
+          </button>
+          <button
+            onClick={() => setActiveTabe("Ladae")}
+            className={`py-[16px] px-[24px] text-[16px] font-[600] ${
+              activeTab === "Ladae"
+                ? "border-b-2 border-[#2498E2] text-[#2498E2] bg-[#E2F0FC]"
+                : "text-[#7C7C7C]"
+            } `}
+          >
+            Ladae
+          </button>
+          <button
+            onClick={() => setActiveTabe("Mahindra")}
+            className={`py-[16px] px-[24px] text-[16px] font-[600] ${
+              activeTab === "Mahindra"
+                ? "border-b-2 border-[#2498E2] text-[#2498E2] bg-[#E2F0FC]"
+                : "text-[#7C7C7C]"
+            } `}
+          >
+            Mahindra
+          </button>
+          <button
+            onClick={() => setActiveTabe("Nissan")}
+            className={`py-[16px] px-[24px] text-[16px] font-[600] ${
+              activeTab === "Nissan"
+                ? "border-b-2 border-[#2498E2] text-[#2498E2] bg-[#E2F0FC]"
+                : "text-[#7C7C7C]"
+            } `}
+          >
+            Nissan
+          </button>
+        </div>
+
         {/* ======> Gallery Div <====== */}
         <div className="lg:mt-[48px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[33px] lg:px-0 px-[20px]">
-          <ViewCard
+          {cardData?.length > 0 &&
+            cardData?.map((item, i) => (
+              <ViewCard
+                title={"Toyota Crown Signia"}
+                description={
+                  "These are the vehicles that have captured the hearts of drivers everywhere. Explore our top-selling models"
+                }
+                image={card_image1}
+                data={item}
+              />
+            ))}
+
+          {/* <ViewCard
             title={"Toyota Crown Signia"}
             description={
               "These are the vehicles that have captured the hearts of drivers everywhere. Explore our top-selling models"
@@ -87,7 +192,7 @@ const Gallery = () => {
               "These are the vehicles that have captured the hearts of drivers everywhere. Explore our top-selling models"
             }
             image={card_image1}
-          />
+          /> */}
         </div>
 
         {/* ======> Pagination <===== */}

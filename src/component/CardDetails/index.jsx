@@ -41,12 +41,14 @@ const CardDetails = () => {
     }
   };
 
+  console.log(cardData);
+
   return (
     <div className="">
       <div>
         <Navbar viewNav="cardDetails" />
       </div>
-      <CardDetailsBanner />
+      <CardDetailsBanner data={cardData} />
       <div className="max-w-[1367px] px-[20px] lg:px-0   mx-auto">
         {/* ======> Tab part <===== */}
         <div className=" card_details max-w-[1376px] mx-auto overflow-x-scroll lg:overflow-visible flex items-center lg:gap-[89px] gap-[50px] mt-[56px]  mb-[30px] lg:mb-[64px]">
@@ -119,8 +121,8 @@ const CardDetails = () => {
             Performance
           </button>
         </div>
-        <Introduction />
-        <Specifications />
+        <Introduction data={cardData} />
+        <Specifications data={cardData} />
         <CardDetailsGallery />
         <Features />
         <Performance />
