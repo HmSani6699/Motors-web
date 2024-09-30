@@ -1,20 +1,16 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import banner_img from "../../../../public/images/cardDetails.png";
 import arrow_image from "../../../../public/svg/Arrow right (1).svg";
-
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
-// Import required modules
-import { Pagination } from "swiper/modules";
+import { get } from "../../../api/axios";
+const baseUrl = "http://localhost:1337/";
 
 const Banner = () => {
   const swiperRef = useRef(null); // Reference to the Swiper instance
   const [activeIndex, setActiveIndex] = useState(0); // State to track the active slide index
+  const [bannerData, setBannerData] = useState([]);
 
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.activeIndex); // Update active index on slide change
@@ -32,6 +28,22 @@ const Banner = () => {
     }
   };
 
+  useEffect(() => {
+    handleGetBannerData();
+  }, []);
+
+  const handleGetBannerData = async () => {
+    try {
+      const res = await get(`/api/banner-sliders?populate=image`);
+      console.log(res);
+      setBannerData(res?.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  console.log(bannerData);
+
   return (
     <div className="pt-[80px] lg:pt-0 relative overflow-hidden">
       <Swiper
@@ -40,7 +52,7 @@ const Banner = () => {
         className="mySwiper"
         onSlideChange={handleSlideChange} // Add slide change event
       >
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <div className="relative h-[470px] lg:h-[950px]  md:h-[500px] w-full">
             <img
               className="h-full w-full object-cover"
@@ -159,37 +171,44 @@ const Banner = () => {
               </div>
             </div>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="relative h-[470px] lg:h-[950px]  md:h-[500px] w-full">
-            <img
-              className="h-full w-full object-cover"
-              src={banner_img}
-              alt="Mobile Banner 1"
-            />
-            <div className="absolute top-0 h-full w-full">
-              <div className="flex items-center max-w-[1376px] mx-auto lg:pl-[50px] px-[50px] md:px-[70px] lg:px-0 h-full">
-                <div>
-                  <h2 className="text-white text-[40px] lg:text-[64px] font-[700] text-center lg:text-left leading-[48px] lg:leading-[74px]">
-                    Meet the GR <br className="lg:block hidden" /> Corolla Power{" "}
-                    <br className="lg:block hidden" />
-                    Beyond Limits
-                  </h2>
-                  <p className="text-white mt-[16px] text-[16px] lg:text-[24px] font-[500] text-center lg:text-left leading-[24px] lg:leading-[28px]">
-                    Unleash the thrill of driving with unmatched{" "}
-                    <br className="lg:block hidden" /> performance and dynamic
-                    design.
-                  </p>
-                  <div className="mt-[32px] flex items-center justify-center lg:block">
-                    <button className="py-[16px] px-[35px] rounded-[8px] bg-[#2498E2] font-[500] text-white">
-                      Explore more
-                    </button>
+        </SwiperSlide> */}
+
+        {bannerData?.length > 0 &&
+          bannerData?.map((item, i) => {
+            return (
+              <>
+                <SwiperSlide key={i}>
+                  <div className="relative h-[470px] lg:h-[950px]  md:h-[500px] w-full">
+                    <img
+                      className="h-full w-full object-cover"
+                      src={`${baseUrl}${item?.image?.url.slice(
+                        1,
+                        item?.image?.url?.length
+                      )}`}
+                      alt="Mobile Banner 1"
+                    />
+                    <div className="absolute top-0 h-full w-full">
+                      <div className="flex items-center max-w-[1376px] mx-auto lg:pl-[50px] px-[50px] md:px-[70px] lg:px-0 h-full">
+                        <div>
+                          <h2 className="text-white text-[40px] lg:text-[64px] w-full lg:w-[500px] font-[700] text-center lg:text-left leading-[48px] lg:leading-[74px]">
+                            {item?.title}
+                          </h2>
+                          <p className="text-white mt-[16px] text-[16px] lg:text-[24px] font-[500] text-center lg:text-left leading-[24px] lg:leading-[28px]">
+                            {item?.description}
+                          </p>
+                          <div className="mt-[32px] flex items-center justify-center lg:block">
+                            <button className="py-[16px] px-[35px] rounded-[8px] bg-[#2498E2] font-[500] text-white">
+                              Explore more
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
+                </SwiperSlide>
+              </>
+            );
+          })}
       </Swiper>
       {/* Arrow Buttons for Navigation */}
       <div className="absolute bottom-[30px] lg:bottom-[50px] px-[100px] w-full z-20">
@@ -200,16 +219,18 @@ const Banner = () => {
 
           {/* Custom Pagination Indicators */}
           <div className="flex gap-[16px] items-center">
-            {[...Array(5)].map((_, index) => (
-              <div
-                key={index}
-                className={`border-[4px] rounded-full ${
-                  index === activeIndex
-                    ? "border-[#2498E2] lg:w-[106px]"
-                    : "border-[#DCDCDC] lg:w-[47px]"
-                }`}
-              />
-            ))}
+            {[...Array(bannerData?.length > 0 && bannerData?.length)].map(
+              (_, index) => (
+                <div
+                  key={index}
+                  className={`border-[4px] rounded-full ${
+                    index === activeIndex
+                      ? "border-[#2498E2] lg:w-[106px]"
+                      : "border-[#DCDCDC] lg:w-[47px]"
+                  }`}
+                />
+              )
+            )}
           </div>
 
           <button onClick={goToNextSlide}>

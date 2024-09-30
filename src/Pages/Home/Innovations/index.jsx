@@ -150,43 +150,42 @@ const Innovations = () => {
       </div>
 
       {/* =======> Progress Bar <====== */}
-      {swiperRef.current && (
-        <div className="items-center justify-center gap-[79px] lg:flex hidden">
-          {/* ====> Progress div <==== */}
-          <div className="relative">
-            <div className="border-4 border-gray-300 w-[300px] rounded-full">
-              <div
-                className="border-4 border-[#2498E2] rounded-full"
-                style={{
-                  width: `${
-                    ((activeIndex + 1) /
-                      swiperRef.current.swiper.slides.length) *
-                    500
-                  }px`, // Dynamic width based on active slide
-                  transition: "width 0.3s ease",
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                }}
-              />
-            </div>
-          </div>
-          <div className="flex items-center gap-[32px]">
-            <button onClick={goToPrevSlide} disabled={activeIndex === 0}>
-              <img className="-rotate-[135deg]" src={arrow} alt="Previous" />
-            </button>
-            <button
-              onClick={goToNextSlide}
-              className="h-[35px] w-[35px] rounded-full bg-[#2498E2] flex items-center justify-center"
-              disabled={
-                activeIndex === swiperRef.current.swiper.slides.length - 1
-              }
-            >
-              <img className="w-[25px] rotate-180" src={leftArrow} alt="Next" />
-            </button>
+
+      <div className="items-center justify-center gap-[79px] lg:flex hidden">
+        {/* ====> Progress div <==== */}
+        <div className="relative">
+          <div className="border-4 border-gray-300 w-[300px] rounded-full">
+            <div
+              className="border-4 border-[#2498E2] rounded-full"
+              style={{
+                width: `${
+                  ((activeIndex + 1) /
+                    swiperRef?.current?.swiper?.slides?.length) *
+                  500
+                }px`, // Dynamic width based on active slide
+                transition: "width 0.3s ease",
+                position: "absolute",
+                top: 0,
+                left: 0,
+              }}
+            />
           </div>
         </div>
-      )}
+        <div className="flex items-center gap-[32px]">
+          <button onClick={goToPrevSlide} disabled={activeIndex === 0}>
+            <img className="-rotate-[135deg]" src={arrow} alt="Previous" />
+          </button>
+          <button
+            onClick={goToNextSlide}
+            className="h-[35px] w-[35px] rounded-full bg-[#2498E2] flex items-center justify-center"
+            disabled={
+              activeIndex === swiperRef?.current?.swiper?.slides?.length - 1
+            }
+          >
+            <img className="w-[25px] rotate-180" src={leftArrow} alt="Next" />
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
