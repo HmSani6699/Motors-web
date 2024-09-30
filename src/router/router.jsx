@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         element: <Gallery />,
       },
       {
-        path: "/stock/details",
+        path: "/stock/details/:id",
         element: <CardDetails />,
       },
       {

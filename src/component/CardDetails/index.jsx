@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../Pages/Navbar";
 import CardDetailsBanner from "./CardDetailsBanner";
 import Introduction from "./Introduction";
@@ -8,10 +8,13 @@ import Features from "./Features";
 import Performance from "./Performance";
 import DiscoverMore from "./DiscoverMore";
 import Footer from "../../Pages/Footer";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { get } from "../../api/axios";
 
 const CardDetails = () => {
+  const { id } = useParams();
   const [activeTab, setActiveTabe] = useState("Overview");
+  const [cardData, setCardData] = useState([]);
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -20,6 +23,21 @@ const CardDetails = () => {
         top: section.offsetTop,
         behavior: "smooth",
       });
+    }
+  };
+
+  // ========> Handle get Best Selling data <=======//
+  useEffect(() => {
+    handleGetCartData();
+  }, []);
+
+  const handleGetCartData = async () => {
+    try {
+      const res = await get(`/api/cards/${id}?populate=image`);
+      console.log(res);
+      setCardData(res?.data);
+    } catch (error) {
+      console.log(error);
     }
   };
 
