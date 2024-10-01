@@ -8,6 +8,7 @@ import next from "../../../public/svg/Next.svg";
 import more from "../../../public/svg/more.svg";
 import Footer from "../Footer";
 import { get } from "../../api/axios";
+import PaginationExample from "../../component/Pagination";
 const baseUrl = "http://localhost:1337";
 
 const Gallery = () => {

@@ -7,7 +7,7 @@ const TextareaFiled = ({ placeholder = "Write your message" }) => {
     const handleResize = () => {
       if (window.innerWidth >= 768 || window.innerWidth >= 1024) {
         // adjust breakpoint as needed
-        setRows(15);
+        setRows(8);
       } else {
         setRows(5);
       }

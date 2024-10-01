@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Card from "../../../component/Card";
 import arrow from "../../../../public/svg/Arrow.svg";
 import leftArrow from "../../../../public/svg/Arrow right (1).svg";
@@ -6,10 +6,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import { get } from "../../../api/axios";
 
 const Innovations = () => {
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0); // State to track the active slide index
+  const [allblogData, setAllBlogData] = useState([]);
 
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.activeIndex); // Update active index on slide change
@@ -26,6 +28,23 @@ const Innovations = () => {
       swiperRef.current.swiper.slideNext();
     }
   };
+
+  // ========> Handle get Best Selling data <=======//
+  useEffect(() => {
+    handleGetAllBlogData();
+  }, []);
+
+  const handleGetAllBlogData = async () => {
+    try {
+      const res = await get(`/api/blogs?populate=image`);
+      console.log(res);
+      setAllBlogData(res?.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  console.log(allblogData);
 
   return (
     <div className="max-w-[1376px] lg:mx-auto mb-[32px] lg:mb-[135px]">
@@ -68,11 +87,21 @@ const Innovations = () => {
             },
           }}
         >
-          {Array.from({ length: 5 }).map((_, index) => (
-            <SwiperSlide key={index} style={{ width: "345px" }}>
-              <Card />
-            </SwiperSlide>
-          ))}
+          {/* {Array.from({ length: allblogData && allblogData?.length }).map(
+            (item, index) => (
+              <SwiperSlide key={index} style={{ width: "345px" }}>
+                <Card data={item} />
+              </SwiperSlide>
+            )
+          )} */}
+
+          {allblogData &&
+            allblogData?.length > 0 &&
+            allblogData?.map((item, i) => (
+              <SwiperSlide key={i} style={{ width: "345px" }}>
+                <Card data={item} />
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
 
@@ -88,7 +117,7 @@ const Innovations = () => {
                 width: `${
                   ((activeIndex + 1) /
                     swiperRef?.current?.swiper?.slides?.length) *
-                  500
+                  350
                 }px`, // Dynamic width based on active slide
                 transition: "width 0.3s ease",
                 position: "absolute",
