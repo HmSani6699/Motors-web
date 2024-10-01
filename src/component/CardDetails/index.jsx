@@ -123,9 +123,9 @@ const CardDetails = () => {
         </div>
         <Introduction data={cardData} />
         <Specifications data={cardData} />
-        <CardDetailsGallery />
-        <Features />
-        <Performance />
+        <CardDetailsGallery data={cardData} />
+        <Features data={cardData} />
+        <Performance data={cardData} />
         <DiscoverMore />
       </div>
       <Footer />

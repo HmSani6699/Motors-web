@@ -1,6 +1,8 @@
 import React from "react";
 
-const Performance = () => {
+const Performance = ({ data }) => {
+  console.log(data);
+
   return (
     <div id="Performance" className="lg:mt-[64px] mt-[32px]">
       <h2 className="lg:text-[32px] text-[24px] font-[700] lg:leading-[38px] text-[#141414] font-avenir mb-[24px]">
@@ -12,7 +14,7 @@ const Performance = () => {
             Acceleration
           </h2>
           <h3 className="lg:text-[24px] text-[16px] text-[#141414] font-[600] lg:leading-[28px] leading-[24px] lg:mt-[16px]">
-            0-60 mph in 5.4 seconds
+            {data?.acceleration}
           </h3>
         </div>
         <div className="border-b-2 border-[#000] pb-[10px] md:w-[300px]">
@@ -20,7 +22,7 @@ const Performance = () => {
             Top Speed
           </h2>
           <h3 className="lg:text-[24px] text-[#141414] font-[600] lg:leading-[28px] lg:mt-[16px]">
-            155 mph
+            {data?.top_speed}
           </h3>
         </div>
         <div className="border-b-2 border-[#000] pb-[10px] md:w-[300px]">
@@ -28,7 +30,7 @@ const Performance = () => {
             Driving Modes
           </h2>
           <h3 className="lg:text-[24px] text-[#141414] font-[600] lg:leading-[28px] lg:mt-[16px]">
-            Eco, Comfort, Sport, Sport+
+            {data?.driving_modes}
           </h3>
         </div>
       </div>
