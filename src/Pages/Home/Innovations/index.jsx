@@ -87,14 +87,6 @@ const Innovations = () => {
             },
           }}
         >
-          {/* {Array.from({ length: allblogData && allblogData?.length }).map(
-            (item, index) => (
-              <SwiperSlide key={index} style={{ width: "345px" }}>
-                <Card data={item} />
-              </SwiperSlide>
-            )
-          )} */}
-
           {allblogData &&
             allblogData?.length > 0 &&
             allblogData?.map((item, i) => (
