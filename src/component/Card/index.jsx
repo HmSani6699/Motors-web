@@ -8,7 +8,7 @@ const Card = ({ data }) => {
   console.log(data);
 
   return (
-    <div className=" lg:h-[574px] h-[520px] relative">
+    <div className=" lg:h-[530px] h-[500px] relative">
       <div className="h-[300px]">
         <img
           className="h-full w-full rounded-[15px]"

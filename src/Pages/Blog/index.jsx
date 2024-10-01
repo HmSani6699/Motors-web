@@ -9,23 +9,33 @@ import Footer from "../Footer";
 import Card from "../../component/Card";
 import { get } from "../../api/axios";
 import PageLoading from "../../component/LoadingSpinner/PageLoading";
+import Pagination from "../../component/Pagination";
 
 const Blog = () => {
   const [blogData, setBlogData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const pageSize = 9;
 
   // ========> Handle get Best Selling data <=======//
   useEffect(() => {
-    handleGetAllBlogData();
-  }, []);
+    handleGetAllBlogData(currentPage);
+  }, [currentPage]);
 
-  const handleGetAllBlogData = async () => {
+  const handleGetAllBlogData = async (page) => {
     setLoading(true);
     try {
-      const res = await get(`/api/blogs?populate=image`);
+      const res = await get(
+        `/api/blogs?populate=image&pagination[page]=${page}&pagination[pageSize]=${pageSize}`
+      );
       console.log(res);
       setBlogData(res?.data);
       setLoading(false);
+      setTotalPages(Math.ceil(res?.meta?.pagination?.total / pageSize));
+
+      // Scroll to top after fetching new data
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (error) {
       console.log(error);
       setLoading(false);
@@ -40,7 +50,7 @@ const Blog = () => {
         {loading ? (
           <PageLoading />
         ) : (
-          <div className="lg:pt-[120px] pt-[90px]  max-w-[1376px] mx-auto">
+          <div className="lg:pt-[150px] pt-[90px]  max-w-[1376px] mx-auto">
             <div className="lg:flex items-center">
               <h2 className="lg:text-[48px] font-[700] whitespace-nowrap mb-[16px] lg:mb-0 lg:leading-[57px] text-[#141414] text-center lg:text-left text-[24px] leading-[28px]">
                 Checkout Our Blogs
@@ -59,7 +69,7 @@ const Blog = () => {
             </div>
 
             {/* ======> Pagination <===== */}
-            <div className=" items-center gap-[30px] mt-[48px] lg:mb-[120px] md:mb-[64px] lg:flex md:flex hidden md:px-[24px]">
+            {/* <div className=" items-center gap-[30px] mt-[48px] lg:mb-[120px] md:mb-[64px] lg:flex md:flex hidden md:px-[24px]">
               <button>
                 <img src={prov} alt="" />
               </button>
@@ -73,6 +83,13 @@ const Blog = () => {
               <button>
                 <img src={next} alt="" />
               </button>
+            </div> */}
+            <div className="lg:block hidden">
+              <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={setCurrentPage}
+              />
             </div>
 
             {/* =======> Mobile pagination <====== */}
