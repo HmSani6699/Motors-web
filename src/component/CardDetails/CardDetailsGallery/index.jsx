@@ -25,7 +25,7 @@ const CardDetailsGallery = ({ data }) => {
         Gallery
       </h2>
 
-      <div className="flex gap-[32px] lg:h-[556px] w-full">
+      <div className=" gap-[32px] lg:h-[556px] lg:flex hidden w-full">
         {/* ======> Left side <====== */}
         <div className="h-full w-full lg:w-[65%] rounded-[15px]">
           <img
@@ -68,25 +68,20 @@ const CardDetailsGallery = ({ data }) => {
           pagination={{ clickable: true }} // Enable clickable pagination
           modules={[Pagination]}
           className="mySwiper"
+          spaceBetween={20}
         >
-          <SwiperSlide className="rounded-[15px]">
-            <div className="relative h-[286px]  md:h-[594px]  w-full">
-              <img
-                className=" h-full rounded-[15px]  w-full"
-                src={banner_img}
-                alt="Mobile Banner 1"
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="rounded-[15px]">
-            <div className="relative h-[286px]  md:h-[594px]  w-full">
-              <img
-                className=" h-full rounded-[15px]  w-full"
-                src={banner_img}
-                alt="Mobile Banner 1"
-              />
-            </div>
-          </SwiperSlide>
+          {data?.image?.length > 0 &&
+            data?.image?.map((item, i) => (
+              <SwiperSlide className="rounded-[15px]">
+                <div className="relative h-[286px]  md:h-[594px]  w-full">
+                  <img
+                    className=" h-full rounded-[15px]  w-full"
+                    src={`${baseUrl}${item?.url}`}
+                    alt="Mobile Banner 1"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
 
