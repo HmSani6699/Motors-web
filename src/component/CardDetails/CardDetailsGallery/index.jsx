@@ -37,11 +37,11 @@ const CardDetailsGallery = ({ data }) => {
         {/* ======> Right side <====== */}
         <div className="w-full flex flex-col gap-[32px] lg:w-[35%] h-full relative">
           {data?.image?.length > 0 &&
-            data?.image?.slice(0, 2)?.map((item1, i) => (
+            data?.image?.slice(0, 2)?.map((item, i) => (
               <div className="h-[262px]">
                 <img
                   className="w-full h-full rounded-[15px]"
-                  src={card_image2}
+                  src={`${baseUrl}${item?.url}`}
                   alt="image 2"
                 />
               </div>

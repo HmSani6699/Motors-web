@@ -25,7 +25,7 @@ const BestSelling = () => {
 
   const handleGetBestSellingData = async () => {
     try {
-      const res = await get(`/api/cards?populate=image`);
+      const res = await get(`/api/cars?populate=image`);
       console.log(res);
       setBestSellingData(res?.data);
     } catch (error) {

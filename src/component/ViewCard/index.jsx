@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const baseUrl = "http://localhost:1337";
 
-const ViewCard = ({ data, description, value }) => {
+const ViewCard = ({ data, value }) => {
   return (
     <div className="w-full">
       <div
@@ -19,7 +19,9 @@ const ViewCard = ({ data, description, value }) => {
           <h2 className="mb-[16px] text-[32px] font-[700] text-white">
             {data?.title}
           </h2>
-          <p className="text-[14px] font-[400] text-white">{description}</p>
+          <p className="text-[14px] font-[400] text-white">
+            {data?.description}
+          </p>
         </div>
       </div>
 

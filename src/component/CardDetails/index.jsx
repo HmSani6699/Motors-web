@@ -12,6 +12,7 @@ import { Link, useParams } from "react-router-dom";
 import { get } from "../../api/axios";
 
 const CardDetails = () => {
+  const [loading, setLoading] = useState(false);
   const { id } = useParams();
   const [activeTab, setActiveTabe] = useState("Overview");
   const [cardData, setCardData] = useState([]);
@@ -32,12 +33,17 @@ const CardDetails = () => {
   }, []);
 
   const handleGetCartData = async () => {
+    setLoading(true);
     try {
-      const res = await get(`/api/cards/${id}?populate=image`);
+      const res = await get(`/api/cars/${id}?populate=image`);
       console.log(res);
       setCardData(res?.data);
+      // Scroll to top after fetching new data
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setLoading(false);
     } catch (error) {
       console.log(error);
+      setLoading(false);
     }
   };
 

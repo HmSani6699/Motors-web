@@ -17,7 +17,7 @@ const DiscoverMore = () => {
 
   const handleGetCardData = async () => {
     try {
-      const res = await get(`/api/cards?populate=image`);
+      const res = await get(`/api/cars?populate=image`);
       console.log(res);
       setAllCardData(res?.data);
     } catch (error) {
